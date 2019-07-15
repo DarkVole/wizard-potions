@@ -1,6 +1,6 @@
 <template>
-    <div class="index container">
-        <div class="card" v-for="potion in potions" :key="potion.id">
+    <div class="index container ">
+        <div class="card card-panel" v-for="potion in potions" :key="potion.id">
             <div class="card-content">
                 <i class="material-icons delete" @click="deletePotion(potion.id)">delete</i>
                 <h2 class="indigo-text">{{potion.title}}</h2>
@@ -10,7 +10,7 @@
                     </li>
                 </ul>
             </div>
-            <span class="btn-floating btn-large halfway-fab pink">
+            <span class="btn-floating btn-large halfway-fab light-blue accent-4">
                 <router-link :to="{name: 'EditPotion', params: {potion_slug: potion.slug} }">
                     <i class="material-icons edit">edit</i>
                 </router-link>
@@ -57,7 +57,13 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+    .card-panel {
+        background-color: #f0ead6;
+
+    }
+
     .index {
+
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 30px;
@@ -69,7 +75,7 @@
         font-size: 1.8em;
         text-align: center;
         margin-top: 0;
-        font-family: 'Sue Ellen Francisco', cursive;
+        font-family: 'Pacifico', cursive;
 
     }
 
@@ -84,13 +90,13 @@
         top: 4px;
         right: 4px;
         cursor: pointer;
-        color: #aaa;
+        color: #616161;
         font-size: 1.4em;
     }
 
     .chip-level {
 
-        background-color: #edea56;
+        background-color: #bbdefb;
         display: block;
         padding-left: 15px;
         padding-right: 15px;
@@ -99,7 +105,7 @@
         margin-left: 5px;
         border-radius: 15px;
         margin-bottom: 5px;
-        font-family: 'Over the Rainbow', cursive;
+        font-family: 'Handlee', cursive;
 
 
 
